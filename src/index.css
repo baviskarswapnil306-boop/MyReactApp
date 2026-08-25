@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #1d2d2a;
+  background: #f4efe6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+button {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 32px 20px;
+  background:
+    linear-gradient(120deg, rgba(224, 235, 218, 0.72), transparent 42%),
+    radial-gradient(circle at 88% 16%, rgba(243, 191, 104, 0.26), transparent 26%),
+    #f4efe6;
+}
+
+.counter-panel {
+  width: min(100%, 530px);
+  padding: clamp(32px, 7vw, 68px);
+  border: 1px solid rgba(29, 45, 42, 0.16);
+  background: rgba(255, 253, 248, 0.78);
+  box-shadow: 12px 14px 0 #d6e1ce;
+}
+
+.eyebrow,
+.count-label,
+.footer-note {
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+}
+
+.eyebrow {
+  margin: 0 0 18px;
+  color: #cf6339;
+}
+
+h1 {
+  margin: 0;
+  max-width: 8ch;
+  font-size: clamp(3.2rem, 10vw, 5.4rem);
+  line-height: 0.9;
+  letter-spacing: 0;
+}
+
+.period {
+  color: #cf6339;
+}
+
+.intro {
+  margin: 22px 0 0;
+  max-width: 28ch;
+  color: #68736b;
+  line-height: 1.5;
+}
+
+.count-display {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 58px 0 24px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #1d2d2a;
+}
+
+.count-label {
+  color: #68736b;
+}
+
+.count-display strong {
+  color: #cf6339;
+  font-size: clamp(3rem, 12vw, 5.5rem);
+  line-height: 0.8;
+  font-weight: 600;
+}
+
+.press-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 0;
+  padding: 18px 20px;
+  color: #fffdf8;
+  background: #1d2d2a;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.press-button span {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.press-button:hover {
+  background: #cf6339;
+}
+
+.press-button:active {
+  transform: translateY(3px);
+}
+
+.press-button:focus-visible,
+.reset-button:focus-visible {
+  outline: 3px solid #e1a83b;
+  outline-offset: 4px;
+}
+
+.reset-button {
+  display: block;
+  margin: 18px auto 0;
+  border: 0;
+  padding: 0;
+  color: #68736b;
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.9rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.reset-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.4;
+}
+
+.footer-note {
+  position: absolute;
+  bottom: 22px;
+  margin: 0;
+  color: #68736b;
+}
+
+@media (max-width: 520px) {
+  .app-shell {
+    padding: 24px 16px 64px;
+  }
+
+  .counter-panel {
+    box-shadow: 7px 8px 0 #d6e1ce;
+  }
+
+  .footer-note {
+    bottom: 16px;
+  }
+}
