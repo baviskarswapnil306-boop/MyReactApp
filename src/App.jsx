@@ -16,8 +16,8 @@ function App() {
       <section className="counter-panel" aria-labelledby="page-title">
         <div className="panel-heading">
           <p className="eyebrow">Live tally</p>
-          <h1 id="page-title">Press count<span className="period">.</span></h1>
-          <p className="intro">A tiny space for one very satisfying number.</p>
+          <h1 id="page-title">Button Counter App<span className="period">.</span></h1>
+          <p className="intro">Hello user, welcome to the app.</p>
         </div>
 
         <div className="count-display" aria-live="polite" aria-atomic="true">
