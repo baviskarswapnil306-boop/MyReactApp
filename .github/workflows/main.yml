@@ -10,14 +10,14 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - uses: actions/checkout@v4
-     - name: Setup Node.js environment
-       uses: actions/setup-node@v6.5.0
-       with:
-         node-version: 22.x
-     - name: Install dependencies
-       run: npm install
-     - name: build app
-       run: npm run build
-        
-         
+      - uses: actions/checkout@v4
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v6.5.0
+        with:
+          node-version: 22.x
+      - name: Install dependencies
+        run: npm install
+      - name: Fix permissions
+        run: chmod +x node_modules/.bin/*
+      - name: build app
+        run: npm run build
